@@ -38,7 +38,7 @@ const sideMenubar = [
 const LeftSidebar = () => {
     return (
         <section className="fixed w-72 h-full flex flex-col justify-between items-stretch">
-            <div className='mt-4 space-y-2'>
+            <div className='mt-4 space-y-3'>
                 {
                     sideMenubar.map((item) => {
                         return (
@@ -61,7 +61,7 @@ const LeftSidebar = () => {
                     })
                 }
 
-                <button className='w-11/12 m-4 text-center rounded-full bg-primary hover:bg-opacity-70 transition duration-200 p-4 text-xl'>
+                <button className='w-11/12 m-3 text-center rounded-full bg-primary hover:bg-opacity-70 transition duration-200 p-3 text-xl'>
                     Tweet
                 </button>
             </div>
