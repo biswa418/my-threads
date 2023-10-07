@@ -1,4 +1,5 @@
 import { LeftSidebar } from "@/components"
+import { BsDot } from "react-icons/bs"
 
 const Home = () => {
   return (
@@ -30,6 +31,40 @@ const Home = () => {
               </div>
             </div>
 
+          </div>
+
+
+          {/* posts */}
+          <div className="flex flex-col">
+            {
+              Array(6).fill(0).map((_, i) => {
+                return (
+                  <div key={i} className="border-t border-b border-slate-900 flex space-x-4">
+                    <div>
+                      <div className="w-10 h-10 rounded-full bg-slate-300"></div>
+                    </div>
+
+                    <div className="flex flex-col">
+                      <div className="flex items-center space-x-1">
+                        <div>Biswajeet</div>
+                        <div>@biswajeet</div>
+                        <div>
+                          <BsDot />
+                        </div>
+                        <div>1 hour ago</div>
+                      </div>
+
+                      <div className="text-sm">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos nesciunt, nemo tempora harum sint fugit! Veritatis, nam unde explicabo porro, harum quaerat asperiores dolore natus consectetur est magnam nemo. Minima.
+                      </div>
+                      <div>
+
+                      </div>
+                    </div>
+                  </div>
+                )
+              })
+            }
           </div>
         </main>
 
