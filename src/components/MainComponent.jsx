@@ -85,7 +85,7 @@ const MainComponent = () => {
                                     </div>
 
                                     {/* interactions */}
-                                    <div className="flex items-center space-x-12 mt-2 w-full">
+                                    <div className="flex items-center justify-between mt-2 w-full">
                                         {
                                             icons.map((icon) => {
                                                 return (
