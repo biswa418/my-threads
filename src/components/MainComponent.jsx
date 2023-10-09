@@ -1,4 +1,4 @@
-import { BsChat, BsDot, BsThreeDots } from "react-icons/bs"
+import { BsChat, BsDot, BsThreeDotsVertical } from "react-icons/bs"
 import { AiOutlineHeart, AiOutlineRetweet } from 'react-icons/ai'
 import { IoShareOutline, IoStatsChart } from 'react-icons/io5'
 
@@ -71,7 +71,7 @@ const MainComponent = () => {
                                         </div>
 
                                         <div className="rounded-full hover:bg-white/10 transition duration-200 p-1 cursor-pointer">
-                                            <BsThreeDots />
+                                            <BsThreeDotsVertical />
                                         </div>
                                     </div>
 
