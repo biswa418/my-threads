@@ -37,13 +37,13 @@ const sideMenubar = [
 
 const LeftSidebar = () => {
     return (
-        <section className="fixed w-72 h-full flex flex-col justify-between items-stretch">
-            <div className='mt-4 space-y-3'>
+        <section className="sticky top-0 w-1/4 min-w-fit h-screen flex flex-col justify-between items-stretch">
+            <div className='mt-4 space-y-2'>
                 {
                     sideMenubar.map((item) => {
                         return (
                             <Link
-                                className='hover:bg-white/10 text-xl w-fit transition duration-150 rounded-3xl py-2 px-6 flex items-center space-x-4'
+                                className='hover:bg-white/10 text-lg w-fit transition duration-150 rounded-3xl py-2 px-6 flex items-center space-x-4'
                                 href={`/${item.title.toLowerCase()}`}
                                 key={item.title}>
 

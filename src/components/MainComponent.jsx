@@ -23,7 +23,7 @@ const icons = [
 
 const MainComponent = () => {
     return (
-        <main className="ml-72 flex w-[600px] h-full min-h-screen flex-col border-l border-r border-slate-900">
+        <main className="flex w-1/2 h-full min-h-screen min-w-[600px] flex-col border-l border-r border-slate-900">
             <h1 className="text-xl font-bold p-5 backdrop-blur z-10 bg-black/10 sticky top-0">Home</h1>
 
             <div className="border-t border-b px-6 flex items-stretch py-4 space-x-2 border-slate-900 relative">
@@ -54,12 +54,12 @@ const MainComponent = () => {
                 {
                     Array(10).fill(0).map((_, i) => {
                         return (
-                            <div key={i} className="border-b p-4 border-slate-900 flex space-x-4">
+                            <div key={i} className="border-b p-4 w-full border-slate-900 flex space-x-3">
                                 <div>
                                     <div className="w-10 h-10 rounded-full bg-slate-300"></div>
                                 </div>
 
-                                <div className="flex flex-col">
+                                <div className="flex flex-col relative">
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center space-x-1">
                                             <div className="font-bold">Biswajeet</div>
@@ -81,7 +81,7 @@ const MainComponent = () => {
                                     </div>
 
                                     {/* photo */}
-                                    <div className="bg-slate-400 aspect-square w-full h-96 rounded-lg">
+                                    <div className="bg-slate-400 aspect-square h-96 rounded-lg">
                                     </div>
 
                                     {/* interactions */}
