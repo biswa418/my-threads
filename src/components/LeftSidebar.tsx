@@ -37,22 +37,22 @@ const sideMenubar = [
 
 const LeftSidebar = () => {
     return (
-        <section className="sticky top-0 w-1/4 min-w-fit h-screen flex flex-col justify-between items-stretch">
-            <div className='mt-4 space-y-2'>
+        <section className="sticky top-0 w-1/5 px-2 min-w-fit h-screen flex flex-col justify-between items-stretch">
+            <div className='mt-4'>
                 {
                     sideMenubar.map((item) => {
                         return (
                             <Link
-                                className='hover:bg-white/10 text-lg w-fit transition duration-150 rounded-3xl py-2 px-6 flex items-center space-x-4'
+                                className='mb-2 hover:bg-white/10 text-lg w-fit transition duration-150 rounded-3xl py-2 px-6 flex items-center space-x-4'
                                 href={`/${item.title.toLowerCase()}`}
                                 key={item.title}>
 
-                                <div>
+                                <div className='text-2xl'>
                                     <item.icon />
                                 </div>
                                 {
                                     item.title !== 'Twitter' &&
-                                    <div>
+                                    <div className='text-lg'>
                                         {item.title}
                                     </div>
                                 }
@@ -61,12 +61,12 @@ const LeftSidebar = () => {
                     })
                 }
 
-                <button className='w-11/12 m-3 text-center rounded-full bg-primary hover:bg-opacity-70 transition duration-200 p-3 text-xl'>
+                <button className='w-10/12 mx-2 my-4 text-center rounded-full bg-primary hover:bg-opacity-70 transition duration-200 p-3 py-2 text-lg'>
                     Tweet
                 </button>
             </div>
 
-            <button className='w-11/12 m-4 flex justify-between items-center rounded-full bg-transparent hover:bg-white/10 transition duration-200 p-4 text-center'>
+            <button className='w-11/12 m-4 flex justify-between items-center rounded-full bg-transparent hover:bg-white/10 transition duration-200 p-3 text-center'>
                 <div className='flex items-center space-x-3'>
                     <div className='rounded-full bg-slate-400 h-10 w-10'></div>
                     <div className="text-left ">

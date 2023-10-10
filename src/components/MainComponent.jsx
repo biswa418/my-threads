@@ -23,15 +23,15 @@ const icons = [
 
 const MainComponent = () => {
     return (
-        <main className="flex w-1/2 h-full min-h-screen min-w-[600px] flex-col border-l border-r border-slate-900">
-            <h1 className="text-xl font-bold p-5 backdrop-blur z-10 bg-black/10 sticky top-0">Home</h1>
+        <main className="flex w-2/5 overflow-clip h-full min-h-screen min-w-[600px] flex-col border-l border-r border-neutral-800">
+            <h1 className="text-lg font-bold p-5 backdrop-blur z-10 bg-black/10 sticky top-0">Home</h1>
 
             <div className="border-t border-b px-6 flex items-stretch py-4 space-x-2 border-slate-900 relative">
                 <div className="w-10 h-10 bg-slate-400 rounded-full flex-none">
                 </div>
 
                 <div className="flex flex-col justify-between w-full h-full">
-                    <div className="flex space-x-2 border-slate-900">
+                    <div className="flex space-x-2 border-neutral-800">
                         <input type="text" className="w-full h-full bg-transparent p-3 outline-none border-none text-lg placeholder:text-slate-600" placeholder="What's on your mind?" />
                     </div>
 
@@ -54,7 +54,7 @@ const MainComponent = () => {
                 {
                     Array(10).fill(0).map((_, i) => {
                         return (
-                            <div key={i} className="border-b p-4 w-full border-slate-900 flex space-x-3">
+                            <div key={i} className="border-b p-4 w-full border-neutral-800 flex space-x-3">
                                 <div>
                                     <div className="w-10 h-10 rounded-full bg-slate-300"></div>
                                 </div>
