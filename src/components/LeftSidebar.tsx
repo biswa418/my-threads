@@ -61,7 +61,7 @@ const LeftSidebar = () => {
                     })
                 }
 
-                <button className='w-10/12 mx-2 my-4 text-center rounded-full bg-primary hover:bg-opacity-70 transition duration-200 p-3 py-2 text-lg'>
+                <button className='w-10/12 mx-2 my-4 text-center text-base rounded-full bg-prime hover:bg-opacity-80 transition duration-200 p-4 py-3'>
                     Tweet
                 </button>
             </div>

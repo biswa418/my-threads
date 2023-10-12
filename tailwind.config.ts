@@ -18,6 +18,7 @@ const config: Config = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         bg: "rgb(22,24,28)",
+        prime: "rgb(29, 155, 240)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

@@ -39,7 +39,7 @@ const MainComponent = () => {
                         <div></div>
 
                         <div>
-                            <button className='w-full text-center rounded-full bg-primary hover:bg-opacity-70 transition duration-200 px-3 py-1 text-md'>
+                            <button className='w-full text-center rounded-full bg-prime hover:bg-opacity-80 transition duration-200 px-4 py-2 text-sm'>
                                 Tweet
                             </button>
                         </div>
