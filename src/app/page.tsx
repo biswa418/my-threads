@@ -1,4 +1,4 @@
-import { LeftSidebar, MainComponent, RightSection } from "@/components"
+import { LeftSidebar, MainComponent, RightSection } from "@/components";
 
 const Home = () => {
   return (
@@ -9,7 +9,7 @@ const Home = () => {
         <RightSection />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
