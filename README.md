@@ -24,3 +24,6 @@ bun dev
     - an infinite timeline (fetch the tweets)
     - user page/profile
     - users can like, bookmark and reply to a tweet
+
+
+    - supabase server / client component auth -> read docs
