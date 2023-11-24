@@ -37,7 +37,7 @@ const sideMenubar = [
 
 const LeftSidebar = () => {
     return (
-        <section className="sticky top-0 w-1/5 px-2 min-w-fit h-screen flex flex-col justify-between items-stretch">
+        <section className="sticky top-0 w-1/5 px-2 min-w-fit h-screen hidden lg:flex flex-col justify-between items-stretch">
             <div className='mt-4'>
                 {
                     sideMenubar.map((item) => {

@@ -32,12 +32,14 @@ export interface Database {
           {
             foreignKeyName: "bookmarks_tweet_id_fkey"
             columns: ["tweet_id"]
+            isOneToOne: false
             referencedRelation: "tweets"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "bookmarks_user_id_fkey"
             columns: ["user_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
@@ -63,12 +65,14 @@ export interface Database {
           {
             foreignKeyName: "follows_follower_id_fkey"
             columns: ["follower_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "follows_following_id_fkey"
             columns: ["following_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
@@ -112,12 +116,14 @@ export interface Database {
           {
             foreignKeyName: "likes_tweet_id_fkey"
             columns: ["tweet_id"]
+            isOneToOne: false
             referencedRelation: "tweets"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "likes_user_id_fkey"
             columns: ["user_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
@@ -146,6 +152,7 @@ export interface Database {
           {
             foreignKeyName: "profiles_id_fkey"
             columns: ["id"]
+            isOneToOne: true
             referencedRelation: "users"
             referencedColumns: ["id"]
           }
@@ -177,18 +184,21 @@ export interface Database {
           {
             foreignKeyName: "reply_reply_id_fkey"
             columns: ["reply_id"]
+            isOneToOne: false
             referencedRelation: "reply"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "reply_tweet_id_fkey"
             columns: ["tweet_id"]
+            isOneToOne: false
             referencedRelation: "tweets"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "reply_user_id_fkey"
             columns: ["user_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
@@ -211,12 +221,14 @@ export interface Database {
           {
             foreignKeyName: "tweet_hashtag_hashtag_id_fkey"
             columns: ["hashtag_id"]
+            isOneToOne: false
             referencedRelation: "hashtag"
             referencedColumns: ["id"]
           },
           {
             foreignKeyName: "tweet_hashtag_tweet_id_fkey"
             columns: ["tweet_id"]
+            isOneToOne: false
             referencedRelation: "tweets"
             referencedColumns: ["id"]
           }
@@ -233,7 +245,7 @@ export interface Database {
         Insert: {
           author_id: string
           created_at?: string | null
-          id: string
+          id?: string
           text: string
           updated_at?: string | null
         }
@@ -248,6 +260,7 @@ export interface Database {
           {
             foreignKeyName: "tweets_author_id_fkey"
             columns: ["author_id"]
+            isOneToOne: false
             referencedRelation: "profiles"
             referencedColumns: ["id"]
           }
