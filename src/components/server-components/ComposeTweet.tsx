@@ -25,12 +25,12 @@ const ComposeTweet = () => {
     }
 
     const cookieStore = cookies();
-    const supabase = createBrowserClient<Database>(
+    const supabaseServer = createBrowserClient<Database>(
       supabaseURL!,
       supabaseSecretKey!,
     );
 
-    const supabaseUser = createBrowserClient<Database>(
+    const supabase = createBrowserClient<Database>(
         supabaseURL!,
         process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
         {
@@ -42,11 +42,11 @@ const ComposeTweet = () => {
         }
       );
 
-    const { data: userData, error: userError } = await supabaseUser.auth.getUser();
+    const { data: userData, error: userError } = await supabase.auth.getUser();
 
     if (userError) return;
 
-    const { data: tweetData, error: tweetError } = await supabase.from('tweets').insert({
+    const { data: tweetData, error: tweetError } = await supabaseServer.from('tweets').insert({
         author_id: userData.user.id,
         text: tweet.toString().trim()
     })
