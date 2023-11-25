@@ -3,6 +3,7 @@ import { createBrowserClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
 import { Database } from "@/lib/database.types";
 import TweetForm from "../client-components/TweetForm";
+import { revalidatePath } from "next/cache";
 
 const ComposeTweet = () => {
   async function submitTweet(formData: FormData) {
@@ -50,6 +51,8 @@ const ComposeTweet = () => {
         author_id: userData.user.id,
         text: tweet.toString().trim()
     })
+
+    revalidatePath('/');
 
     return {tweetData, tweetError}
   }

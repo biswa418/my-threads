@@ -102,9 +102,9 @@ export interface Database {
         }
         Insert: {
           created_at?: string | null
-          id: string
-          tweet_id?: string | null
-          user_id?: string | null
+          id?: string
+          tweet_id: string | null
+          user_id: string | null
         }
         Update: {
           created_at?: string | null
